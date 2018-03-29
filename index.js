@@ -1,8 +1,8 @@
 var express = require('express');
 // import express from 'express';
 // import routes from './routes/shoesRoutes';
-var routes = require('./routes/shoesRoute');
-var routes = require('./routes/shortsRoute');
+var shoesRoute = require('./routes/shoesRoute');
+var shortRoute = require('./routes/shortsRoute');
 const app = express();
 const PORT = 3000;
 
@@ -10,8 +10,8 @@ const PORT = 3000;
 app.get('/', (req, res) => 
     res.send(`Thanks for visiting the soprt gear store!`)
 );
-
-app.use('/', routes);
+app.use('/', shoesRoute);
+app.use('/', shortRoute);
 
 app.listen(PORT, () =>
     console.log(`Server is listening on port ${PORT}`)

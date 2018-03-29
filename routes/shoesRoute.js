@@ -8,6 +8,13 @@ router.post('/shoes', function (req, res, next) {
     res.send(`POST request successful.`);
 });
 
+router.put('/shoes', function(req, res, next) {
+    res.send(`PUT request successful.`)
+})
+
+router.delete('/shoes', function(req, res, next) {
+    res.send(`DELETE request successful.`)
+})
 module.exports = router;
 
 // const routes= (app) => {
